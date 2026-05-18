@@ -33,7 +33,7 @@ jobs:
       - name: Run MLflow Project
         run: |
           cd MLProject
-          mlflow run .
+          mlflow run . -P data_file=dataset_preprocessing.csv
 
       ### Upload artifact
       - name: Upload Artifact
