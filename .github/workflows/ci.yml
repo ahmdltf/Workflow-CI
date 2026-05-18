@@ -39,8 +39,11 @@ jobs:
 
       ### Run MLflow Project
       - name: Run MLflow Project
+        shell: bash -l {0}
         run: |
           cd MLProject
+          conda init bash
+          eval "$(conda shell.bash hook)"
           mlflow run . -P data_file=dataset_preprocessing.csv
 
       ### Upload artifact
