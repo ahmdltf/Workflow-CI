@@ -44,7 +44,7 @@ jobs:
           cd MLProject
           conda init bash
           eval "$(conda shell.bash hook)"
-          mlflow run . -P data_file=MLProject/dataset_preprocessing.csv
+          mlflow run . -P data_file=dataset_preprocessing.csv
 
       ### Upload artifact
       - name: Upload Artifact
