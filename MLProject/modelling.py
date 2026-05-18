@@ -8,7 +8,7 @@ from sklearn.metrics import mean_squared_error
 
 ### Load dataset
 df = pd.read_csv(
-    'Membangun_model/dataset_preprocessing.csv'
+    'MLProject/dataset_preprocessing.csv'
 )
 
 ### Split feature dan target
