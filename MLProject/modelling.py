@@ -1,15 +1,15 @@
 import pandas as pd
 import mlflow
 import mlflow.sklearn
+import sys
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
-### Load dataset
-df = pd.read_csv(
-    'MLProject/dataset_preprocessing.csv'
-)
+### Load dataset using parameter from MLflow
+data_file = sys.argv[1] if len(sys.argv) > 1 else 'dataset_preprocessing.csv'
+df = pd.read_csv(data_file)
 
 ### Split feature dan target
 X = df.drop('Exam_Score', axis=1)
